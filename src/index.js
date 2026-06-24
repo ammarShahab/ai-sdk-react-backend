@@ -1,7 +1,7 @@
 import "dotenv/config";
 import express from "express";
 import cors from "cors";
-import { convertToModelMessages, streamText } from "ai";
+import { streamText } from "ai";
 // import { deepseek } from "@ai-sdk/deepseek";
 // import { openai } from "@ai-sdk/openai";
 import { groq } from "@ai-sdk/groq";
