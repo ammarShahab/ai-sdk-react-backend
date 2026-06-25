@@ -57,13 +57,14 @@ app.post("/chat", async (req, res) => {
       messages: modelMessages,
     });
 
-    //   result.pipeUIMessageStreamToResponse(res)(res);
     // result.pipeTextStreamToResponse(res);
 
     // result.pipeDataStreamToResponse(res);
+
     // ✅ Correct method for Express
-    result.pipeTextStreamToResponse(res);
-    // result.pipeDataStreamToResponse(res);
+    // result.pipeTextStreamToResponse(res);
+    //Method to stream UI messages to the ui
+    result.pipeUIMessageStreamToResponse(res);
   } catch (error) {
     console.error("Chat error:", error);
     res.status(500).json({ error: "Something went wrong" });
